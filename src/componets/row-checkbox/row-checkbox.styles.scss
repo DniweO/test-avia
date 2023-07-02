@@ -1,0 +1,44 @@
+.row-checkbox {
+  cursor: pointer;
+  display: block;
+  padding: 10px  20px;
+
+  &:hover {
+    background-color: var(--primary-100, #F1FCFF);
+  }
+
+  &__input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  &__checkmark {
+    background: url("../../assets/images/checkbox-uncheck.svg");
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+    color: var(--secondary-text, #4A4A4A);
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 20px;
+
+    &::before {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+      background: url("../../assets/images/checkbox-uncheck.svg");
+      transition: all 0.07s ease-in-out;
+    }
+
+    input[type="checkbox"]:checked + & {
+      &::before {
+        background: url("../../assets/images/checkbox-check.svg");
+      }
+    }
+  }
+}
