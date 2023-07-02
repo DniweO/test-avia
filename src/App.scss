@@ -1,0 +1,21 @@
+.app {
+  min-height: 100vh;
+  background-color: var(--main-background, #F3F7FA);
+  padding-bottom: 50px;
+}
+
+.container {
+  display: flex;
+  width: 960px;
+  padding: 0 103px;
+  margin: auto;
+}
+
+.sidebar-column {
+  flex: 1 0 232px;
+}
+
+.content-column {
+  width: 100%;
+  margin-left: 20px;
+}
